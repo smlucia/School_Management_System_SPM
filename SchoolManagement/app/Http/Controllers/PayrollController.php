@@ -13,9 +13,6 @@ class PayrollController extends Controller
 {
     public function index(Request $request)
     {
-       /* $payroll = Payroll::all();
-        return view ('payroll.index')->with('payroll', $payroll);*/
-
         $search = $request['search'] ?? "";
         if($search != ""){
             $payroll = Payroll::where('staff_name','LIKE', "%$search%")->orWhere('staff_name','LIKE', "%$search%")->get();
@@ -125,12 +122,6 @@ class PayrollController extends Controller
         ->groupBy('month')
         ->get();
 
-    //    $results2 = DB::table('staff')
-    //     ->select('name', 'distance')
-    //     ->where('distance', '>' , '35')
-    //     ->get();
-
-        //$pdf = PDF::loadView('staff.report', $data)->setOptions(['defaultFont' => 'sans-serif']);
         $pdf = PDF::loadView('payroll.report', compact('results'))->setOptions(['defaultFont' => 'sans-serif']);
         return $pdf->download('payroll.pdf');
     }
@@ -143,10 +134,6 @@ class PayrollController extends Controller
         ->groupBy('month')
         ->get();
 
-        // $results2 = DB::table('staff')
-        //    ->select('name', 'distance')
-        //    ->where('distance', '>' , '35')
-        //    ->get();
         return view('payroll.report', compact('reports','results'));
     }
 }
