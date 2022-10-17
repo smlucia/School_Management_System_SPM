@@ -6,13 +6,14 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\PayrollController;
 
+use App\Http\Controllers\CustomAuthController;
 
 
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/login', function () {
+Route::get('/homepage', function () {
     return view('auth.login');
 });
 
@@ -87,4 +88,13 @@ Route::get('/generate-pdf', [PayrollController::class, 'generatePDF']);
 Route::get('/generate-pdf', [EventsController::class, 'generatePDF']);
 Route::get('/autocomplete', [PayrollController::class, 'autoIndex'])->name('autocomplete');
 Route::post('/autocomplete/fetch', [PayrollController::class, 'fetch'])->name('autocomplete.fetch');
+
+//login related
+Route::get('/', [CustomAuthController::class, 'home']); 
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('postlogin', [CustomAuthController::class, 'login'])->name('postlogin'); 
+Route::get('signup', [CustomAuthController::class, 'signup'])->name('register-user');
+Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 

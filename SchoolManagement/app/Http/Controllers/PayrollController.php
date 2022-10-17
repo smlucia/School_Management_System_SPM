@@ -33,7 +33,7 @@ class PayrollController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'staff_name'=> 'required|min:3|unique:payroll',
+            'staff_name'=> 'required|min:3',
             'designation'=> 'required|min:3',
             'year'=> 'required|min:4|max:4',
             'salary'=> 'required|min:5',
@@ -106,19 +106,32 @@ class PayrollController extends Controller
             {
                 $output .= '
                 <li><a class="dropdown-item" href="#">'.$row->name.'</a></li>
-                ';
+                '; 
             }
             $output .= '</ul>';
             echo $output;
         }
     }
 
+
     //pdf generating
-    public function generatePDF()
+    public function generatePayrollPDF()
     {
         $results = DB::table('payroll')
         ->select('month', DB::raw('SUM(salary + cost + allowance) as total_sal'))
         ->where('year','=', '2022')
+        ->orderByRaw('CASE WHEN month="January" THEN 1 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="February" THEN 2 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="March" THEN 3 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="April" THEN 4 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="May" THEN 5 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="June" THEN 6 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="July" THEN 7 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="August" THEN 8 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="September" THEN 9 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="October" THEN 10 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="November" THEN 11 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="December" THEN 12 ELSE null END DESC')
         ->groupBy('month')
         ->get();
 
@@ -131,6 +144,18 @@ class PayrollController extends Controller
         $results = DB::table('payroll')
         ->select('month', DB::raw('SUM(salary + cost + allowance) as total_sal'))
         ->where('year','=', '2022')
+        ->orderByRaw('CASE WHEN month="January" THEN 1 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="February" THEN 2 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="March" THEN 3 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="April" THEN 4 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="May" THEN 5 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="June" THEN 6 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="July" THEN 7 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="August" THEN 8 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="September" THEN 9 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="October" THEN 10 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="November" THEN 11 ELSE null END DESC')
+        ->orderByRaw('CASE WHEN month="December" THEN 12 ELSE null END DESC')
         ->groupBy('month')
         ->get();
 
