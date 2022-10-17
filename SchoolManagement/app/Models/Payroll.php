@@ -10,7 +10,7 @@ class Payroll extends Model
     protected $table = 'payroll';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'staff_name', 'designation','photo',
+        'staff_name','photo',
         'month','year',
         'salary', 'allowance', 'cost',
         'ntf', 'etf','netSalary'];
