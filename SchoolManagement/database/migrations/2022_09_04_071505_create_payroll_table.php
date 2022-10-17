@@ -18,7 +18,6 @@ return new class extends Migration
 
 
             $table->string("staff_name");
-            $table->string("designation");
             $table->string("photo");
             $table->string("month");
             $table->integer("year");
