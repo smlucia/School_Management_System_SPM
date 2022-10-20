@@ -6,7 +6,7 @@ Ellucian is a management system for a School. By using this the records of the s
 1. Clone the repo to your local machine using
 
 ```
-git clone https://github.com/PoornaGTX/Dream-Career.git](https://github.com/smlucia/School_Management_System_SPM.git
+git clone https://github.com/smlucia/School_Management_System_SPM.git
 ```
 
 # Project Technologies
