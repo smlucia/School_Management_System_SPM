@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
+<<<<<<< HEAD
 
     <style>
         .heading{
@@ -32,6 +33,8 @@
         font-weight:bold;
     }
     </style>
+=======
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 </head>
 
 <body>
@@ -40,11 +43,19 @@
             <div class="">
                 <div class="">
                     <div class="">
+<<<<<<< HEAD
                         <h2 class="heading">Details of The Events</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('/event/create') }}" class="btn btn-success btn-sm" title="Add New Student" id="add_btn">
                             <i class="fa fa-plus" aria-hidden="true"  style="margin-left:10px;"></i> Add New
+=======
+                        <h2 style="text-align: center;">Details of The Events</h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{ url('/event/create') }}" class="btn btn-success btn-sm" title="Add New Student">
+                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
                         </a>
                         <br />
                         <br />
@@ -54,6 +65,7 @@
                         <div class="form-group">
 
                             <input type="search" name="search" id="" class="form-control me-2"
+<<<<<<< HEAD
                                 placeholder="Search by Event Name " value="{{$search}}" style="margin: 3px; font-family:'Candara'; font-size:18px;">
 
                         </div>
@@ -68,13 +80,27 @@
                                 RESET
                                 </b>
                             </button>
+=======
+                                placeholder="Search by event name " value="{{$search}}" style="margin: 3px;">
+
+                        </div>
+                        <button class="btn"
+                            style="margin: 5px; background-color:navy; border: #66b3ff; color:white; width:100px; height:37px; text-align:center;">Search</b></button>
+                        <a href="{{route('event.index')}}">
+                            <button class="btn btn-primary" type="button"
+                                style="margin: 5px; background-color:#99ccff; color:white; border:#99ccff; width:100px; height:37px; text-align:center;">Reset</b></button>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
                         </a>
                     </form>
                     <br></br></br></br>
 
                     @foreach($events as $item)
 
+<<<<<<< HEAD
                     <div class="card" style="margin-left:50px; margin-top:20px;">
+=======
+                    <div class="card">
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
                         <img src="{{ asset($item->photo) }}" width='80' height='80' class="img img-responsive"
                             style="margin-top: 20px;margin-bottom:9px;border-radius:10%; border: 1px solid" />
                         <h5><b>{{ $item->event_name }}</b></h5>

@@ -121,7 +121,11 @@
         </br>
     </div>
     <button>
+<<<<<<< HEAD
         <a href="http://127.0.0.1:8000/generate-pdf4">Download Report</a>
+=======
+        <a href="http://127.0.0.1:8000/generate-pdf">Download Report</a>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     </button>
 </body>
 

@@ -10,6 +10,7 @@
         margin-bottom: 20px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
+<<<<<<< HEAD
         width: 70%;
         display: flex;
         height: 750px;
@@ -20,11 +21,21 @@
 
     .right {
         margin-left: 470px;
+=======
+        width: 90%;
+        display: flex;
+        height: 750px;
+    }
+
+    .right {
+        margin-left: 500px;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
         margin-top: -600px;
         margin-bottom: 50px;
 
     }
 
+<<<<<<< HEAD
     .heading {
         text-align: center;
         text-shadow: 2px 2px #e1d3f5;
@@ -34,13 +45,19 @@
         font-family: 'Candara';
     }
 
+=======
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     label {
 
         font-weight: 600;
     }
     </style>
 </head>
+<<<<<<< HEAD
 <h2 class="heading"> Update Student Details</h2>
+=======
+<h2 style="text-align: center; text-shadow: 2px 2px #e1d3f5">-- Update Student --</h2>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 <div class="bigbox">
     <form action="{{ url('student/' .$students->id) }}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
@@ -123,6 +140,7 @@
                 @error('occupation')
                 {{$message}}
                 @enderror
+<<<<<<< HEAD
             </span></br>
 
         </div>
@@ -141,6 +159,14 @@
             font-size: 23px;
             margin-left:530px;
             margin-top:-20px;"></br>
+=======
+                </span></br>
+
+        </div>
+
+        <input type="submit" value="Update Student" class="btn btn-success"
+            style="width:28%; font-size:18px; margin-left:550px;"></br>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 
     </form>
 </div>

@@ -37,7 +37,11 @@
     }
 
     .right {
+<<<<<<< HEAD
         margin-left: 420px;
+=======
+        margin-left: 500px;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
         margin-top: -300px;
         margin-bottom: 50px;
 
@@ -50,6 +54,7 @@
         margin-bottom: 20px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
+<<<<<<< HEAD
         width: 68%;
         margin-left:200px;
         margin-bottom:50px;
@@ -62,14 +67,24 @@
         font-size: 40px;
         font-weight: bold;
         text-align: center;
+=======
+        width: 90%;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     }
     </style>
 </head>
 
+<<<<<<< HEAD
 <h2 class="name">{{$students->name}}</h2>
 
 <div class="bigbox">
     <h3 style="margin-left: 30px; margin-bottom:20px; font-family:'Candara'; font-weight:bold;">Student Details</h3>
+=======
+<h2 style="text-align: center; text-shadow: 2px 2px #e1d3f5">-- {{$students->name}} --</h2>
+
+<div class="bigbox">
+    <h3 style="margin-left: 30px;">Student Details</h3>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     <p class="card-text"><img src="{{ asset($students->photo) }}" width='100' height='100' class="img img-responsive"
             style="margin-left:80px; border-radius:50%; border: 1px solid;" />
     </p><br>
@@ -106,7 +121,11 @@
     </div>
 
     <div class="right">
+<<<<<<< HEAD
         <h3 style="margin-left:100px; margin-bottom:20px; font-family:'Candara'; font-weight:bold;">Parent's Details</h3>
+=======
+        <h3>Parent's Details</h3>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
         <div class="box">
             <p>
                 <b>Name: </b>{{ $students->parent_name}}

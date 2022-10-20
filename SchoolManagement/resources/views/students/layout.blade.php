@@ -36,6 +36,7 @@
     .topnav a.active {
         border-bottom: 3px solid white;
     }
+<<<<<<< HEAD
 
     body {
 
@@ -44,17 +45,24 @@
         background-position: center;
         height: 100%
     }
+=======
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     </style>
 
     <title>Student Management System</title>
 </head>
 
+<<<<<<< HEAD
 <body style="background-image: url('images/bg13.jpg');">
+=======
+<body>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     <header>
 
         <div class="topnav">
             <img class="headerlogo" src="/images/logo.png" width="220px" height="170px"
                 style="margin-top: 10px; margin-left:30px;">
+<<<<<<< HEAD
             <a class="/login" href="{{ route('signout') }}"
                 style="font-family:'Candara';font-size:30px; font-weight:bold;">Logout</a>
             <a href="/studentHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Student</a>
@@ -62,6 +70,15 @@
             <a href="/eventHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Events</a>
             <a href="/payrollHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Payroll</a>
             <a class="active" href="/homepage" style="font-family:'Candara';font-size:30px; font-weight:bold;">Home</a>
+=======
+                <a href="/studentHome">Student</a>
+                <a href="/staffHome">Staff</a>
+                <a href="/eventHome">Events</a>
+                <a href="/payrollHome">Payroll</a>
+                <a href="/adminHome">Admin</a>
+                <a class="active" href="/homepage">Home</a>
+                <a class="/login" href="/{{ route('signout') }}">logout</a>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 
 
         </div>

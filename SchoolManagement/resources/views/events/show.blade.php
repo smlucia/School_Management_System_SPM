@@ -37,7 +37,11 @@
     }
 
     .right {
+<<<<<<< HEAD
         margin-left: 450px;
+=======
+        margin-left: 500px;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
         margin-top: -300px;
         margin-bottom: 60px;
 
@@ -50,6 +54,7 @@
         margin-bottom: 20px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
+<<<<<<< HEAD
         width: 70%;
         height: 500px;
         margin-left: 200px;
@@ -63,11 +68,20 @@
         font-size: 40px;
         font-weight: bold;
         text-align: center;
+=======
+        width: 90%;
+        height: 500px;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     }
     </style>
 </head>
 
+<<<<<<< HEAD
 <h2 class="name">{{$events->event_name}}</h2>
+=======
+
+<h2 style="text-align: center; text-shadow: 2px 2px #e1d3f5">-- {{$events->event_name}} --</h2>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 
 <div class="bigbox">
     <h3 style="margin-left: 30px;">Event Details</h3>

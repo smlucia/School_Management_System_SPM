@@ -10,12 +10,18 @@
         margin-bottom: 20px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
+<<<<<<< HEAD
         width: 73%;
         display: flex;
         height: 800px;
         margin-bottom:50px;
         margin-left:150px;
         margin-top:30px;
+=======
+        width: 90%;
+        display: flex;
+        height: 800px;
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     }
 
     .right {
@@ -25,6 +31,7 @@
 
     }
 
+<<<<<<< HEAD
     .heading{
             text-align: center;
             text-shadow: 2px 2px #e1d3f5;
@@ -34,13 +41,19 @@
             font-family:'Candara';
     }
 
+=======
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     label {
 
         font-weight: 600;
     }
     </style>
 </head>
+<<<<<<< HEAD
 <h2 class="heading">Update Event</h2>
+=======
+<h2 style="text-align: center; text-shadow: 2px 2px #e1d3f5">-- Update Event --</h2>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
 <div class="bigbox">
 
     <form action="{{ url('event/' .$events->id) }}" method="post" enctype="multipart/form-data">
@@ -93,6 +106,7 @@
         <div class="right">
             <img src="{{ $events->photo}}" width="380px" height="280px" style="border-radius: 10%;" />
         </div>
+<<<<<<< HEAD
         <input type="submit" value="UPDATE EVENT" class="btn btn-success"
            style="width:15%; 
             font-size:18px; 
@@ -107,6 +121,10 @@
             font-size: 23px;
             margin-top:60px;
             margin-left:540px;"></br>
+=======
+        <input type="submit" value="Update Event" class="btn btn-success"
+            style="width:28%; font-size:18px; margin-left:540px; margin-top:150px;"></br>
+>>>>>>> dfe0bb1672516fa038637dee1a91896902bdaaa5
     </form>
 </div>
 @stop
