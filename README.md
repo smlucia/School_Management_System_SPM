@@ -8,6 +8,16 @@ Ellucian is a management system for a School. By using this the records of the s
 ```
 git clone https://github.com/smlucia/School_Management_System_SPM.git
 ```
+2. Create a database locally named `schoolapp` utf8_general_ci
+
+3. Download composer 
+   https://getcomposer.org/download/
+   
+4. Open the console and cd your project root directory
+
+5. Run `composer install` or ```php composer.phar install```
+
+6. Run `php artisan serve`
 
 # Project Technologies
 • Laravel 9.0
