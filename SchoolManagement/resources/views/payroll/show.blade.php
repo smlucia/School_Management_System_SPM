@@ -30,7 +30,8 @@
         padding: 5px;
         padding-left: 7px;
         margin-bottom: 10px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-family: 'Candara';
         background-color: whitesmoke;
         margin-left: 30px;
         box-shadow: 2px 2px #afaab5;
@@ -51,16 +52,17 @@
         margin-bottom: 50px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
-        width: 40%;
+        width: 35%;
         height: 400px;
+        font-family: 'Candara';
         margin-left: 100px;
     }
 
-    .name{
+    .name {
         text-shadow: 2px 2px #e1d3f5;
         font-family: 'Candara';
-        font-size:40px;
-        font-weight:bold;
+        font-size: 40px;
+        font-weight: bold;
     }
     </style>
 </head>
@@ -71,40 +73,40 @@
     <div class="bigbox">
         <div class="box">
             <p>
-                <b>Month: </b>{{ $payroll->month }}
+                <b>Month : </b>{{ $payroll->month }}
             </p>
         </div>
         <div class="box">
             <p>
-                <b>Year: </b>{{ $payroll->year }}
+                <b>Year : </b>{{ $payroll->year }}
             </p>
         </div>
         <div class="box">
             <p>
-                <b>Basic Salary(Rs):</b>: </b>{{ $payroll->salary }}
+                <b>Basic Salary(Rs) :</b> </b>{{ $payroll->salary }}
             </p>
         </div>
-        <h6>EARNINGS</h6>
+        <h6 style="font-size:18px; font-weight:bold;">EARNINGS</h6>
         <div class="box">
             <p>
-                <b>Allowance (Rs): </b> {{ $payroll->allowance }}
+                <b>Allowance (Rs) : </b> {{ $payroll->allowance }}
             </p>
         </div>
         <div class="box">
             <p>
-                <b>Cost of Living (Rs): </b> {{ $payroll->cost }}
+                <b>Cost of Living (Rs) : </b> {{ $payroll->cost }}
             </p>
         </div>
-        <h6>DEDUCTION</h6>
+        <h6 style="font-size:18px; font-weight:bold;">DEDUCTION</h6>
         <div class="box">
             <p>
-                <b>NTF(Rs):</b>{{ $payroll->ntf }}
+                <b>NTF(Rs) : </b>{{ $payroll->ntf }}
             </p>
         </div>
 
         <div class="box">
             <p>
-                <b>ETF:(Rs) </b>{{ $payroll->etf }}
+                <b>ETF(Rs) : </b>{{ $payroll->etf }}
             </p>
         </div>
     </div>

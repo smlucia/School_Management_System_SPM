@@ -8,6 +8,7 @@ use App\Models\Staff;
 use Illuminate\Support\Facades\DB;
 use PDF;
 use Illuminate\Support\Facades\File;
+use Illuminate\Validation\Rule;
 
 class PayrollController extends Controller
 {
@@ -33,10 +34,9 @@ class PayrollController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'staff_name'=> 'required|min:3',
-            'designation'=> 'required|min:3',
+            'staff_name' => 'required',
             'year'=> 'required|min:4|max:4',
-            'salary'=> 'required|min:5',
+            'salary'=> 'required',
             'month'=> 'required',
         ],[
             'staff_name.required'=>'The Staff Name is required',
@@ -48,7 +48,7 @@ class PayrollController extends Controller
         $path = $request->file('photo')->storeAs('images', $fileName, 'public');
         $requestData["photo"] = '/storage/'.$path;
         Payroll::create($requestData);
-        return redirect('payroll')->with('flash_message', 'Staff Addedd!');
+        return redirect('payroll')->with('flash_message', 'Payroll Addedd!');
 
     }
 
@@ -67,13 +67,12 @@ class PayrollController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'ntf'=> 'nullable|min:3',
-            'etf'=> 'nullable|min:3',
-            'cost'=> 'nullable|min:3',
-            'allowance'=> 'nullable|min:3'
+            'ntf'=> 'nullable',
+            'etf'=> 'nullable',
+            'cost'=> 'nullable',
+            'allowance'=> 'nullable'
         ],[
             'staff_name.required'=>'The Staff Name is required',
-            'cost.min'=>'The cost of living must be atleast 3 characters'
         ]);
 
         $payroll = Payroll::find($id);

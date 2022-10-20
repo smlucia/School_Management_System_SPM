@@ -38,7 +38,6 @@
     }
 
     body {
-        font-family: Arial, Helvetica, sans-serif;
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -62,7 +61,8 @@
             <a href="/staffHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Staff</a>
             <a href="/eventHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Events</a>
             <a href="/payrollHome" style="font-family:'Candara';font-size:30px; font-weight:bold;">Payroll</a>
-            <a class="/login" href="/homepage" style="font-family:'Candara';font-size:30px; font-weight:bold;">Home</a>
+            <a class="active" href="/homepage" style="font-family:'Candara';font-size:30px; font-weight:bold;">Home</a>
+
 
         </div>
     </header><br><br>
@@ -104,7 +104,6 @@
             <br>Website Developed and Designed by B6-02-07 Project Group
         </p>
     </footer>
-
 </body>
 
 </html>

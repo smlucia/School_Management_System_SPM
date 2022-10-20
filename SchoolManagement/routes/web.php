@@ -5,7 +5,6 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\PayrollController;
-
 use App\Http\Controllers\CustomAuthController;
 
 
@@ -82,10 +81,10 @@ Route::get('/getEventDetails',[EventsController::class,'getEventDetails']);
 Route::resource('/student', StudentController::class);
 Route::resource('/event', EventsController::class);
 Route::resource('/payroll', PayrollController::class);
-Route::get('/generate-pdf', [StaffController::class, 'generatePDF']);
-Route::get('/generate-pdf', [StudentController::class, 'generatePDF']);
-Route::get('/generate-pdf', [PayrollController::class, 'generatePDF']);
-Route::get('/generate-pdf', [EventsController::class, 'generatePDF']);
+Route::get('/generate-pdf1', [StaffController::class, 'generateStaffPDF']);
+Route::get('/generate-pdf4', [StudentController::class, 'generateStudentPDF']);
+Route::get('/generate-pdf3', [PayrollController::class, 'generatePayrollPDF']);
+Route::get('/generate-pdf2', [EventsController::class, 'generateEventPDF']);
 Route::get('/autocomplete', [PayrollController::class, 'autoIndex'])->name('autocomplete');
 Route::post('/autocomplete/fetch', [PayrollController::class, 'fetch'])->name('autocomplete.fetch');
 
@@ -97,4 +96,3 @@ Route::post('postlogin', [CustomAuthController::class, 'login'])->name('postlogi
 Route::get('signup', [CustomAuthController::class, 'signup'])->name('register-user');
 Route::post('postsignup', [CustomAuthController::class, 'signupsave'])->name('postsignup'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
-

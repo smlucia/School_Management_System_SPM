@@ -1,4 +1,4 @@
-@extends('staff.layout')
+@extends('students.layout')
 @section('content')
 
 <head>
@@ -6,30 +6,30 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <style>
-    .heading {
-        text-align: center;
-        text-shadow: 2px 2px #e1d3f5;
-        font-weight: bold;
-        font-size: 50px;
-        margin-bottom: 40px;
-        font-family: 'Candara';
-    }
+        .heading{
+            text-align: center;
+            text-shadow: 2px 2px #e1d3f5;
+            font-weight:bold; 
+            font-size:50px; 
+            margin-bottom:40px;
+            font-family:'Candara';
+        }
 
-    #add_btn {
+        #add_btn {
         font-family: 'Candara';
         font-size: 18px;
         margin-left: -28px;
     }
 
-    #search_reset_btn {
-        border: none;
-        width: 100px;
-        height: 37px;
-        text-align: center;
-        font-family: 'Candara';
-        margin: 5px;
-        font-size: 18px;
-        font-weight: bold;
+    #search_reset_btn{
+        border: none;  
+        width:100px; 
+        height:37px; 
+        text-align:center; 
+        font-family:'Candara';
+        margin: 5px; 
+        font-size:18px;
+        font-weight:bold;
     }
     </style>
 </head>
@@ -40,12 +40,11 @@
             <div class="">
                 <div class="">
                     <div class="">
-                        <h2 class="heading">Details of The Staff Members</h2>
+                        <h2 class="heading">Details of The Events</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/staff/create') }}" class="btn btn-success btn-sm"
-                            title="Add New Staff member" id="add_btn">
-                            <i class="fa fa-plus" aria-hidden="true" style="margin-left:10px;"></i> Add New
+                        <a href="{{ url('/event/create') }}" class="btn btn-success btn-sm" title="Add New Student" id="add_btn">
+                            <i class="fa fa-plus" aria-hidden="true"  style="margin-left:10px;"></i> Add New
                         </a>
                         <br />
                         <br />
@@ -55,7 +54,7 @@
                         <div class="form-group">
 
                             <input type="search" name="search" id="" class="form-control me-2"
-                                placeholder="Search by Staff Name " value="{{$search}}" style="margin: 3px; font-family:'Candara'; font-size:18px;">
+                                placeholder="Search by Event Name " value="{{$search}}" style="margin: 3px; font-family:'Candara'; font-size:18px;">
 
                         </div>
                         <button class="btn" id="search_reset_btn"
@@ -63,7 +62,7 @@
                             SEARCH
                             </b>
                         </button>
-                        <a href="{{route('staff.index')}}">
+                        <a href="{{route('event.index')}}">
                             <button class="btn btn-primary" type="button" id="search_reset_btn"
                                 style="background-color:#99ccff;color:#0A123D;">
                                 RESET
@@ -73,30 +72,29 @@
                     </form>
                     <br></br></br></br>
 
-                    @foreach($staff as $item)
+                    @foreach($events as $item)
 
                     <div class="card" style="margin-left:50px; margin-top:20px;">
                         <img src="{{ asset($item->photo) }}" width='80' height='80' class="img img-responsive"
-                            style="margin-top: 20px;margin-bottom:9px;border-radius:50%; border: 1px solid" />
-                        <h5><b>{{ $item->name }}</b></h5>
-                        <p class="title">{{ $item->contact_no }}</p>
-                        <p>{{ $item->Email }}</p>
+                            style="margin-top: 20px;margin-bottom:9px;border-radius:10%; border: 1px solid" />
+                        <h5><b>{{ $item->event_name }}</b></h5>
+                        <p class="title">{{ $item->e_date}}</p>
+                        <p>{{ $item->e_time }}</p>
 
-                        <a href="{{ url('/staff/' . $item->id) }}" title="View Student"><i class="fa fa-search"
+                        <a href="{{ url('/event/' . $item->id) }}" title="View Event"><i class="fa fa-search"
                                 aria-hidden="true"></i></a>
-                        <form method="POST" action="{{ url('/staff' . '/' . $item->id) }}" accept-charset="UTF-8"
+                        <form method="POST" action="{{ url('/event' . '/' . $item->id) }}" accept-charset="UTF-8"
                             style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             <button type="submit" onclick="return confirm(&quot;Confirm delete?&quot;)">Delete </button>
                         </form>
-                        <a href="{{ url('/staff/' . $item->id . '/edit') }}" title="Edit Staff"><i class="fa fa-pencil"
+                        <a href="{{ url('/event/' . $item->id . '/edit') }}" title="Edit Event"><i class="fa fa-pencil"
                                 aria-hidden="true"></i></a>
 
                     </div>
 
                     @endforeach
-
                 </div>
             </div>
         </div>

@@ -10,16 +10,28 @@
         margin-bottom: 20px;
         background-color: #e9dfed;
         box-shadow: 3px 5px 2px #e1d3f5;
-        width: 90%;
+        width: 70%;
         display: flex;
         height: 700px;
+        margin-bottom:50px;
+        margin-top:30px;
+        margin-left:170px;
     }
 
     .right {
-        margin-left: 500px;
+        margin-left: 450px;
         margin-top: -600px;
         margin-bottom: 50px;
 
+    }
+
+    .heading {
+        text-align: center;
+        text-shadow: 2px 2px #e1d3f5;
+        font-weight: bold;
+        font-size: 50px;
+        margin-bottom: 40px;
+        font-family: 'Candara';
     }
 
     label {
@@ -28,7 +40,7 @@
     }
     </style>
 </head>
-<h2 style="text-align: center; text-shadow: 2px 2px #e1d3f5">-- Register New Student --</h2>
+<h2 class="heading"> Register New Student</h2>
 <div class="bigbox">
     <form action="{{ url('student') }}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
@@ -129,10 +141,20 @@
 
         </div>
 
-        <input type="submit" value="Register Student" class="btn btn-success"
-            style="width:28%; font-size:18px; margin-left:550px;"></br>
+        <input type="submit" value="REGISTER" class="btn btn-success" style="width:20%; 
+            font-size:18px; 
+            font-weight:bold;
+             border-radius:10px; 
+             background-color:#6EE56C; 
+             color:#0A123D; 
+             border:none; 
+             margin-top:-30px;
+             margin-left:550px;
+             font-weight:bold;
+             font-family:'Candara';
+             font-size:23px;
+             width:25%;"></br>
 
     </form>
 </div>
-
 @stop

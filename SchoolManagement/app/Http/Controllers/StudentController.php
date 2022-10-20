@@ -97,7 +97,7 @@ class StudentController extends Controller
     }
 
     //pdf generating
-    public function generatePDF()
+    public function generateStudentPDF()
     {
         $results = DB::table('students')
         ->select('index', 'name')
