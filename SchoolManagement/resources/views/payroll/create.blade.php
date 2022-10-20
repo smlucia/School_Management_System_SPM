@@ -48,19 +48,17 @@
 
         <div>
             <label>Staff's Name : </label></br>
-            <!-- <input type="text" name="staff_name" id="staff_name" class="form-control" style="width: 400px;"
-                value="{{old('staff_name')}}">
-            <span style="color:red">
-                @error('staff_name')
-                {{$message}}
-                @enderror
-            </span> -->
-            <select name="staff_name" id="staff_name" class="form-control" style="width: 400px;" required>
+            <select name="staff_name" id="staff_name" class="form-control" style="width: 400px;" value="{{old('staff_name')}}"required>
                 <option value="None" disabled="true" selected="true">Select the Staff Name</option>
                 @foreach($classname_array as $data)
                 <option value="{{$data->name}}">{{$data->name}}</option>
                 @endforeach
             </select>
+            <span style="color:red">
+                @error('staff_name')
+                {{$message}}
+                @enderror
+            </span>
             <div id="staffList"></div>
             <div>
                 {{ csrf_field() }}
@@ -96,14 +94,6 @@
         });
         </script>
         </br>
-        <!-- <label>Designation : </label></br>
-        <input type="text" name="designation" id="designation" class="form-control" style="width: 400px;"
-            value="{{old('designation')}}">
-        <span style="color:red">
-            @error('designation')
-            {{$message}}
-            @enderror
-        </span></br> -->
         <label>Profile Picture : </label>
         <input class="form-control" name="photo" type="file" id="photo" style="width: 400px;" value="{{old('photo')}}"
             required></br>
@@ -111,7 +101,7 @@
         <label>Select Month :</label> </br>
         <!-- <input type="text" name="month" id="month"  class="form-control" style="width: 400px;"></br> -->
         <select name="month" id="month" class="form-control" style="width: 400px;" value="{{old('month')}}" required>
-            <option value="None"> None </option>
+            <option value="None" disabled="true" selected="true"> Select the Month </option>
             <option value="January"> January </option>
             <option value="February"> February </option>
             <option value="March"> March </option>
@@ -162,6 +152,4 @@
         style="border-radius: 10px; margin-top:-100px; margin-left:50px;" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </div>
-
 @stop
-

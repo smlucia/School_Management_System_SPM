@@ -90,7 +90,7 @@ class EventsController extends Controller
     }
 
     //pdf generating
-    public function generatePDF()
+    public function generateEventPDF()
     {
         $results = DB::table('events')
         ->select('type', DB::raw('SUM(tot_expence) as total_exp'))

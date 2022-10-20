@@ -95,7 +95,7 @@ class StaffController extends Controller
     }
 
     //pdf generating
-    public function generatePDF()
+    public function generateStaffPDF()
     {
         $results = DB::table('staff')
         ->select('name', 'distance')

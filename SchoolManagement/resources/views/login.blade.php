@@ -4,12 +4,12 @@
     <div class="cotainer">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card" style="margin-top:-40px;">
                     <h3 class="card-header text-center">Login</h3>
                     @if(\Session::has('message'))
-                        <div class="alert alert-info">
-                            {{\Session::get('message')}}
-                        </div>
+                    <div class="alert alert-info">
+                        {{\Session::get('message')}}
+                    </div>
                     @endif
                     <div class="card-body">
                         <form method="POST" action="{{ route('postlogin') }}">
@@ -22,7 +22,8 @@
                                 @endif
                             </div>
                             <div class="form-group mb-3">
-                                <input type="password" placeholder="Password" id="password" class="form-control" name="password">
+                                <input type="password" placeholder="Password" id="password" class="form-control"
+                                    name="password">
                                 @if ($errors->has('password'))
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
@@ -36,6 +37,10 @@
                             </div>
                             <div class="d-grid mx-auto">
                                 <button type="submit" class="btn btn-dark btn-block">Log in</button>
+                                </br><p> Don't have an account
+                                <a href="{{ route('register-user') }}" style=" font-family:'Candara'; color:#0A123D;">
+                                    Register
+                                </a> </p>
                             </div>
                         </form>
                     </div>
